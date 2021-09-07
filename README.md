@@ -4,3 +4,13 @@
 ## Curso
 
 Este é um guia de referência para testes automatizados de API utilizando o framework cypress, baseado no curso [Testes de Aplicações Modernas com Cypress](https://www.udemy.com/course/testes-cypress/learn/lecture/16891454?start=557#overview)
+
+## Aplicação a Ser Testada
+
+### Frontend
+
+A aplicação a ser testada será => https://barrigareact.wcaquino.me/
+
+### Backend
+
+Consumindo a API => https://barrigarest.wcaquino.me
