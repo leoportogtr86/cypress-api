@@ -120,7 +120,8 @@ Cypress.Commands.add('resetApi', () => {
             method: 'GET',
             url: 'https://barrigarest.wcaquino.me/reset',
             headers: { Authorization: `JWT ${token}` }
-        })
+        
+        }).its('status').should('equal', 200)
     })
 })
 ```
