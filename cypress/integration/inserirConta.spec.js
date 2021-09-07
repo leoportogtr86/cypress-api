@@ -4,6 +4,13 @@
 
 describe('Inserindo uma conta', () => {
 
+    beforeEach(() => {
+
+        cy.resetApi()
+    })
+
+
+
     it('Deve garantir que o usuário inseriu uma conta', () => {
 
         cy.getToken('leo@email.com', '123456789')

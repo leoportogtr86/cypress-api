@@ -39,6 +39,19 @@ Cypress.Commands.add('getToken', (user, pass) => {
             return token
 
         })
+})
 
 
+
+Cypress.Commands.add('resetApi', () => {
+
+    cy.getToken('leo@email.com', '123456789').then((token) => {
+
+        cy.request({
+
+            method: 'GET',
+            url: 'https://barrigarest.wcaquino.me/reset',
+            headers: { Authorization: `JWT ${token}` }
+        })
+    })
 })
