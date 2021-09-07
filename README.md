@@ -83,4 +83,27 @@ describe('Inserindo uma conta', () => {
 
 ```
 
+## Comando Personalizado para Retornar o Token
+
+```js
+
+Cypress.Commands.add('getToken', (user, pass) => {
+
+    cy.request({
+
+        method: 'POST',
+        url: 'https://barrigarest.wcaquino.me/signin',
+        body: { "email": user, "senha": pass, "redirecionar": false }
+
+    }).its('body.token').should('not.be.empty')
+        .then((token) => {
+
+            return token
+
+        })
+
+
+})
+```
+
 
