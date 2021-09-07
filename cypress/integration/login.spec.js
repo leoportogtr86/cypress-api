@@ -11,11 +11,7 @@ describe('Teste de login', () => {
             url: 'https://barrigarest.wcaquino.me/signin',
             body: { "email": "leo@email.com", "senha": "123456789", "redirecionar": false }
 
-        }).then((res) => {
-
-            console.log(res)
-
-        })
+        }).its('body.token').should('not.be.empty')
     });
 
 });
